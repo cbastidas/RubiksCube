@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- <base href="https://rubikscube3d.com/interactive/"> -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3D Rotatable Rubik's Cube with Center Rotations</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    <div class="controls">
+      <div class="face-controls">
+        <button onclick="rotateFace('front', true)">Front ↻</button>
+        <button onclick="rotateFace('front', false)">Front ↺</button>
+        <button onclick="rotateMiddle('M', false)">M ↑</button>
+        <button onclick="rotateMiddle('M', true)">M ↓</button>
+      </div>
+      <div class="face-controls">
+        <button onclick="rotateFace('back', true)">Back ↻</button>
+        <button onclick="rotateFace('back', false)">Back ↺</button>
+      </div>
+      <div class="face-controls">
+        <button onclick="rotateFace('right', true)">Right ↻</button>
+        <button onclick="rotateFace('right', false)">Right ↺</button>
+        <button onclick="rotateMiddle('S', true)">S ↻</button>
+        <button onclick="rotateMiddle('S', false)">S ↺</button>
+      </div>
+      <div class="face-controls">
+        <button onclick="rotateFace('left', true)">Left ↻</button>
+        <button onclick="rotateFace('left', false)">Left ↺</button>
+      </div>
+      <div class="face-controls">
+        <button onclick="rotateFace('top', true)">Top ↻</button>
+        <button onclick="rotateFace('top', false)">Top ↺</button>
+        <button onclick="rotateMiddle('E', true)">E →</button>
+        <button onclick="rotateMiddle('E', false)">E ←</button>
+      </div>
+      <div class="face-controls">
+        <button onclick="rotateFace('bottom', true)">Bottom ↻</button>
+        <button onclick="rotateFace('bottom', false)">Bottom ↺</button>
+      </div>
+      <button onclick="scramble()">Scramble</button>
+      <button onclick="reset()">Reset</button>
+    </div>
+    <div class="scene" id="scene">
+      <div class="cube" id="cube">
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="face right"></div>
+        <div class="face left"></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+      </div>
+    </div>
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> -->
+    <script src="script.js"> </script>
+    </body>
+    </html>
